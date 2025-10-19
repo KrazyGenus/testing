@@ -15,7 +15,7 @@ FROM python:3-alpine AS runner
 WORKDIR /app
  
 COPY --from=builder /app/venv venv
-COPY example_django example_django
+COPY . .
  
 ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
